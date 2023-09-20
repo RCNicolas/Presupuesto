@@ -11,6 +11,32 @@
 
 <body>
 
+    <form>
+        <input type="number" name="valor" placeholder="Precio">
+        <input type="number" name="cantidad" placeholder="cantidad">
+        <input type="text" name="producto" placeholder="Producto">
+         <br>
+        <input type="radio" name="caja" value="ingreso" checked><label for="">Ingreso</label>
+        <input type="radio" name="caja" value="egreso"><label for="">Egreso</label> <br>
+        <input type="submit" value="calcular">
+
+    </form>
+
+    <table border="solid">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tipo</th>
+                <th>Cantidad</th>
+                <th>Valor</th>
+                <th>Producto</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="myData">
+
+        </tbody>
+    </table>
 </body>
 
 </html>
