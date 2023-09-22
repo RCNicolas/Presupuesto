@@ -10,31 +10,48 @@
 </head>
 
 <body>
+    <dialog>
+        <h2>Editar Datos</h2>
+        <form id="editForm" action="">
+            <input type="number" name="valor" id="editValor" placeholder="Ingrese el valor">
+            <input type="radio" name="caja" id="editCajaIngreso" value="ingreso"><label>Ingreso</label>
+            <input type="radio" name="caja" id="editCajaEgreso" value="egreso"><label>Egreso</label>
+            <input type="number" name="cantidad" id="editCantidad" placeholder="cantidad">
+            <input type="text" name="producto" id="editProducto" placeholder="Producto">
+            <input type="submit" name="" id="" value="Guardar">
+            <input type="button" name="" id="cancelarEdicion" value="Cancelar">
+        </form>
+    </dialog>
 
-    <form>
+    <form id="addForm">
         <input type="number" name="valor" placeholder="Precio">
         <input type="number" name="cantidad" placeholder="cantidad">
         <input type="text" name="producto" placeholder="Producto">
-         <br>
-        <input type="radio" name="caja" value="ingreso" checked><label for="">Ingreso</label>
-        <input type="radio" name="caja" value="egreso"><label for="">Egreso</label> <br>
-        <input type="submit" value="calcular">
-
+        <br><br>
+        <input type="radio" name="caja" value="ingreso" checked="true"><label for="">Ingreso</label>
+        <input type="radio" name="caja" value="egreso"><label for="">Egreso</label>
+        <br><br>
+        <input data-opc="Guardar" type="submit" value="Guardar" id="Guardar">
+        <br><br>
     </form>
+
+    <label for="searchProduct">Buscar Producto:</label>
+    <input type="text" id="searchProduct" placeholder="Nombre del producto">
+    <button id="searchButton">Buscar</button>
+    <br><br>
 
     <table border="solid">
         <thead>
             <tr>
                 <th>#</th>
+                <th>Valor</th>
                 <th>Tipo</th>
                 <th>Cantidad</th>
-                <th>Valor</th>
                 <th>Producto</th>
                 <th>Acción</th>
             </tr>
         </thead>
         <tbody id="myData">
-
         </tbody>
     </table>
 </body>
