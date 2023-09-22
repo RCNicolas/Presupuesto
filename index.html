@@ -13,20 +13,20 @@
     <dialog>
         <h2>Editar Datos</h2>
         <form id="editForm" action="">
-            <input type="number" name="valor" id="editValor" placeholder="Ingrese el valor">
-            <input type="radio" name="caja" id="editCajaIngreso" value="ingreso"><label>Ingreso</label>
+            <input type="number" name="valor" id="editValor" required placeholder="Ingrese el valor">
+            <input type="radio" name="caja" id="editCajaIngreso" required value="ingreso"><label>Ingreso</label>
             <input type="radio" name="caja" id="editCajaEgreso" value="egreso"><label>Egreso</label>
-            <input type="number" name="cantidad" id="editCantidad" placeholder="cantidad">
-            <input type="text" name="producto" id="editProducto" placeholder="Producto">
+            <input type="number" name="cantidad" id="editCantidad" required placeholder="cantidad">
+            <input type="text" name="producto" id="editProducto" required placeholder="Producto">
             <input type="submit" name="" id="" value="Guardar">
             <input type="button" name="" id="cancelarEdicion" value="Cancelar">
         </form>
     </dialog>
 
     <form id="addForm">
-        <input type="number" name="valor" placeholder="Precio">
-        <input type="number" name="cantidad" placeholder="cantidad">
-        <input type="text" name="producto" placeholder="Producto">
+        <input type="number" name="valor" required placeholder="Precio">
+        <input type="number" name="cantidad" required placeholder="cantidad">
+        <input type="text" name="producto" required placeholder="Producto">
         <br><br>
         <input type="radio" name="caja" value="ingreso" checked="true"><label for="">Ingreso</label>
         <input type="radio" name="caja" value="egreso"><label for="">Egreso</label>
