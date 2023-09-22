@@ -64,11 +64,15 @@ const editData = async (id) => {
 
   editCantidad.value = data.cantidad;
   editProducto.value = data.producto;
-
   // ? Función para el manejo de envio del formulario de edición
   const submitEditForm = async (e) => {
     e.preventDefault();
     const updateData = Object.fromEntries(new FormData(e.target));
+    // Convertir a numericos los valores cambiados en la edición 
+    const { valor, cantidad } = updateData;
+    updateData.valor = typeof valor === "string" ? Number(valor) : null;
+    updateData.cantidad = typeof cantidad === "string" ? Number(cantidad) : null;
+
     updateData.caja = editCajaIngreso.checked ? "Ingreso" : "Egreso";
 
     const config = {
