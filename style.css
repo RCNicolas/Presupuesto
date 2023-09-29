@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 1.1rem;
+}
+
+body{
+    background-color: #bad9e4;
+
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+button , input{
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+table{
+    background-color: #8dbbe3;
+    border: none;
+}
+
+thead{
+    background-color: #7aa5d0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+}
+
+input{
+    background-color: #a0caeefb;
+}
+
+[type="submit"], #searchButton{
+    width: 20%;
+    margin: 2% auto;
+    font-size: 1rem;
+    color: #e4e4ea;
+    background-color: #6a46d6;
+    border-radius: .5rem;
+}
+
+h1{
+    font-size: 1.7rem;
+    margin: 1rem;
+}
+
+td{
+    padding: .5rem;
+    justify-content: left;
+}

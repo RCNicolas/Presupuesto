@@ -22,38 +22,43 @@
             <input type="button" name="" id="cancelarEdicion" value="Cancelar">
         </form>
     </dialog>
+    <div class="container">
+        <h1>Presupuesto</h1>
+        <form id="addForm">
+            <input type="number" name="valor" required placeholder="Precio">
+            <input type="number" name="cantidad" required placeholder="cantidad">
+            <input type="text" name="producto" required placeholder="Producto">
+            <br>
+            <input type="radio" name="caja" id="editCajaIngreso" required value="ingreso" checked="true">
+            <label for="editCajaIngreso">Ingreso</label>
+            <input type="radio" name="caja" id="editCajaEgreso" value="egreso">
+            <label for="editCajaEgreso">Egreso</label>
 
-    <form id="addForm">
-        <input type="number" name="valor" required placeholder="Precio">
-        <input type="number" name="cantidad" required placeholder="cantidad">
-        <input type="text" name="producto" required placeholder="Producto">
-        <br><br>
-        <input type="radio" name="caja" value="ingreso" checked="true"><label for="">Ingreso</label>
-        <input type="radio" name="caja" value="egreso"><label for="">Egreso</label>
-        <br><br>
-        <input data-opc="Guardar" type="submit" value="Guardar" id="Guardar">
-        <br><br>
-    </form>
+            <br>
+            <input data-opc="Guardar" type="submit" value="Guardar" id="Guardar">
+            <br>
+        </form>
 
-    <label for="searchProduct">Buscar Producto:</label>
-    <input type="text" id="searchProduct" placeholder="Nombre del producto">
-    <button id="searchButton">Buscar</button>
-    <br><br>
+        <label for="searchProduct">Buscar Producto:</label>
+        <input type="text" id="searchProduct" placeholder="Nombre del producto">
+        <button id="searchButton">Buscar</button>
+        <br><br>
 
-    <table border="solid">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Valor</th>
-                <th>Tipo</th>
-                <th>Cantidad</th>
-                <th>Producto</th>
-                <th>Acción</th>
-            </tr>
-        </thead>
-        <tbody id="myData">
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                    <th>Cantidad</th>
+                    <th>Producto</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="myData">
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
