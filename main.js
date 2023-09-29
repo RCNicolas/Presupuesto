@@ -2,7 +2,7 @@ const dialog = document.querySelector("dialog");
 const myFromAdd = document.querySelector("#addForm");
 const editForm = document.querySelector("#editForm");
 const myTabla = document.querySelector("#myData");
-const urlAPI = "https://6509d051f6553137159c10d2.mockapi.io/tabla";
+const urlAPI = "http://localhost:3000/presupestos";
 
 // ! Funcion para eliminar
 // !-----------------------------------------------------------------------

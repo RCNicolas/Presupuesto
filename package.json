@@ -1,0 +1,15 @@
+{
+  "name": "presupuesto",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene el código fuente de un sistema simple de gestión de ingresos y egresos. El sistema utiliza HTML, CSS y JavaScript para crear una interfaz de usuario que permite al usuario agregar, editar y eliminar transacciones de ingresos y egresos. También proporciona la capacidad de buscar transacciones por nombre de producto.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "json-server --watch db.json"
+  },
+  "keywords": [],
+  "author": "Nicolas Ruiz",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "0.17.3"
+  }
+}
