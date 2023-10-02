@@ -1,65 +1,355 @@
 @import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap');
 
-*{
+
+* {
     margin: 0;
     font-family: 'Yantramanav', sans-serif;
-    font-size: 1.1rem;
+    font-size: 15px;
 }
 
-body{
-    background-color: #bad9e4;
-
+body {
+    background-color: #212121;
 }
 
-.container{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-    margin-top: 2rem;
-}
 
-button , input{
+button,
+input {
     background-color: transparent;
     border: 0;
     border-radius: 0;
 }
 
-table{
-    background-color: #8dbbe3;
-    border: none;
+h1 {
+    padding-block: .8rem;
+    font-size: 2.4rem;
+    text-align: center;
+    width: 15rem;
+    margin: 0 auto;
+    color: #a591f5;
+    border-bottom: 1PX solid #a591f5;
 }
 
-thead{
-    background-color: #7aa5d0;
-    border: none;
-    margin: 0;
-    padding: 0;
-    justify-content: left;
-}
 
-input{
-    background-color: #a0caeefb;
-}
-
-[type="submit"], #searchButton{
-    width: 20%;
-    margin: 2% auto;
+.contenedor-general {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 2fr);
+    gap: 0.5rem;
+    background: linear-gradient(#212121, #212121) padding-box,
+        linear-gradient(155deg, transparent 50%, #e81cff, #40c9ff) border-box;
+    border: 0.1rem solid transparent;
+    padding: .5rem .5rem;
     font-size: 1rem;
-    color: #e4e4ea;
-    background-color: #6a46d6;
-    border-radius: .5rem;
+    font-family: inherit;
+    color: white;
+    border-radius: 1rem;
+    max-width: 85%;
+    /* Cambiado a 100% */
+    margin: 0 auto;
+    /* Cambiado el margen */
 }
 
-h1{
-    font-size: 1.7rem;
-    margin: 1rem;
+.container-table {
+    width: 95%;
+    max-width: 50rem;
+    padding-left: 1rem;
+    color: #717171;
+    height: 100%;
 }
 
-td{
-    padding: .5rem;
-    justify-content: left;
+table {
+    padding-top: 1rem;
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 100%;
+    margin-right: 1rem;
+    padding-inline: 1rem;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table td {
+    border-block: 1px solid #717171;
+    padding: 0.4rem;
+    margin-right: 0.1rem;
+    text-align: left;
+}
+
+table th {
+    padding: 0.8rem;
+}
+
+
+.button-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.container-table button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 0.45rem 0.5rem;
+    font-size: inherit;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    border-radius: 0.7rem;
+}
+
+.form-container {
+    padding-top: 1.8rem;
+    display: inline-block;
+    width: 80%;
+    max-width: 20rem;
+    padding-left: 3rem;
+}
+
+.form-container #addForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #717171;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.form-container .form-group input {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    resize: none;
+    color: #fff;
+    height: auto;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container #guardar,
+#searchButton {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 0.5rem 0.5rem;
+    font-size: inherit;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 0.7rem;
+}
+
+[data-opc="Guardar"] {
+    margin-bottom: 1rem;
+}
+
+.form-container #guardar:hover,
+#searchButton:hover {
+    background: linear-gradient(145deg, transparent 10%, #e81cff47, #40c9ff3b) border-box;
+    border-color: #fff;
+    color: #d6d3d3;
+    border: 1px solid #d6d3d3;
+}
+
+#guardad {
+    margin: 0;
+}
+
+/* ------------------------------------------------- */
+.radio-button-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.radio-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-button__input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    width: 1rem;
+    height: 1rem;
+    z-index: 99;
+}
+
+.radio-button__label {
+    display: inline-block;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 15px;
+    color: #f2f2f2;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.radio-button__custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 2px solid #555;
+    transition: all 0.3s ease;
+}
+
+.radio-button__input:checked+.radio-button__label .radio-button__custom {
+    background-color: #6e4cf5;
+    border-color: transparent;
+    transform: scale(0.8);
+    box-shadow: 0 0 20px #4c8bf580;
+}
+
+.radio-button__input:checked+.radio-button__label {
+    color: #6e4cf5;
+}
+
+.delete:hover {
+    background-color: rgb(132, 25, 25);
+    color: #f2f2f2;
+}
+
+.edit:hover {
+    background-color: #6e4cf5;
+    color: #f2f2f2;
+}
+
+.totales {
+    margin-top: auto;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    color: #a591f5;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 1.1rem;
+}
+
+.totales div {
+    padding-right: 0.6rem;
+    padding-top: 1rem;
+    color: #a591f5;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 1.1rem;
+
+}
+
+/* ------------------------------------------------------------------- */
+@media (max-width: 1050px) {
+    .contenedor-general {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 2rem auto;
+        background: linear-gradient(#212121, #212121) padding-box,
+            linear-gradient(155deg, transparent 10%, #e81cff, #40c9ff) border-box;
+        border: 0.1rem solid transparent;
+
+    }
+
+    .container-table {
+        max-width: 90%;
+        margin-left: 0;
+    }
+
+    table {
+        font-size: 0.8rem;
+        padding-inline: 0.5rem;
+    }
+
+    .form-container {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 20rem;
+        padding: 0;
+    }
+
+    .form-container #addForm {
+        width: 100%;
+    }
+
+    .form-container .form-group {
+        align-items: center;
+    }
+
+    .form-container .form-group input,
+    .form-container .form-group textarea {
+        text-align: center;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container button {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+
+    }
+
+    table th {
+        padding: 0.2rem;
+    }
 }
