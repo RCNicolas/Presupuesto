@@ -3,6 +3,11 @@
 # Sistema de Gestión de Ingresos y Egresos
 
 Este repositorio contiene el código fuente de un sistema simple de gestión de ingresos y egresos. El sistema utiliza HTML, CSS y JavaScript para crear una interfaz de usuario que permite al usuario agregar, editar y eliminar transacciones de ingresos y egresos. También proporciona la capacidad de buscar transacciones por nombre de producto.
+
+
+![Captura de Pantalla](Img/Captura_de_pantalla.png)
+![Captura de Pantalla](Img/Captura_dialog.png)
+
 ## Indice
 * [Contenido del repositorio](#contenido-del-repositorio)
 * [Configuración del Proecto](#configuración-del-proyecto)
@@ -37,15 +42,17 @@ No se requiere una instalación especial para ejecutar este sistema, ya que se p
 3. Abra el archivo `index.html` en su navegador web.
 El proyecto incluye un archivo `package.json` que define las dependencias necesarias para ejecutar el servidor JSON simulado utilizado para almacenar datos. Asegúrese de tener Node.js instalado y luego ejecute en el terminal el siguiente comando para instalar las dependencias:
 
-        npm install -y
+        npm -E -D install json-server
 
+4. Asegurate de tener la siguinete linea de codigo en el `scripts` del archivo `package.json` para ejecutar el siguiente comando de manera efectiva y poder lanzar el servidor local 
 
-4. Luego, puede iniciar el servidor JSON simulado ejecutando:
+        "dev": "json-server --watch db.json --port 5004 --host 127.0.0.2"
+5. Luego, puede iniciar el servidor JSON simulado ejecutando:
 
         npm run dev
 
 
-Esto iniciará el servidor en `http://localhost:3000/presupuestos`, donde se almacenarán y recuperarán los datos del presupuesto.
+Esto iniciará el servidor en `http://127.0.0.2:5004/presupestos`, donde se almacenarán y recuperarán los datos del presupuesto.
 
 ## Uso del Sistema
 
