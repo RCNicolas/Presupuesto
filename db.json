@@ -1,3 +1,53 @@
 {
-  "presupestos": []
+  "presupestos": [
+    {
+      "valor": 1,
+      "caja": "ingreso",
+      "cantidad": 1,
+      "producto": "1",
+      "id": 1
+    },
+    {
+      "valor": 200000,
+      "caja": "ingreso",
+      "cantidad": 2,
+      "producto": "2",
+      "id": 2
+    },
+    {
+      "valor": 50000,
+      "caja": "egreso",
+      "cantidad": 5,
+      "producto": "5",
+      "id": 3
+    },
+    {
+      "valor": 100000,
+      "caja": "ingreso",
+      "cantidad": 10,
+      "producto": "10",
+      "id": 4
+    },
+    {
+      "valor": 100000,
+      "caja": "egreso",
+      "cantidad": 10,
+      "producto": "10",
+      "id": 5
+    },
+    {
+      "valor": 10000,
+      "caja": "egreso",
+      "cantidad": 50,
+      "producto": "84",
+      "id": 6
+    },
+    {
+      "valor": 222222,
+      "caja": "egreso",
+      "cantidad": 45,
+      "producto": "78",
+      "id": 7
+    }
+  ]
 }

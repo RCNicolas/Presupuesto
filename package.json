@@ -4,7 +4,7 @@
   "description": "Este repositorio contiene el código fuente de un sistema simple de gestión de ingresos y egresos. El sistema utiliza HTML, CSS y JavaScript para crear una interfaz de usuario que permite al usuario agregar, editar y eliminar transacciones de ingresos y egresos. También proporciona la capacidad de buscar transacciones por nombre de producto.",
   "main": "main.js",
   "scripts": {
-    "dev": "json-server --watch db.json"
+    "dev": "json-server --watch db.json --port 5004 --host 127.0.0.2"
   },
   "keywords": [],
   "author": "Nicolas Ruiz",
