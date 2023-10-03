@@ -25,15 +25,44 @@ h1 {
     text-align: center;
     width: 15rem;
     margin: 0 auto;
-    color: #a591f5;
+    color: #6e4cf5;
     border-bottom: 1PX solid #a591f5;
+    margin-top: 1.5rem;
 }
 
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    color: #a591f5;
+    padding-bottom: 1.5rem;
+}
+
+/* Dialog */
+dialog {
+    background-color: #313131;
+    border: none;
+    width: auto;
+    max-width: 30rem;
+    margin: auto auto;
+    padding: 1.5rem;
+    color: #717171;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid #6e4cf5;
+    text-align: center;
+    align-items: center;
+}
+
+/*  */
 
 .contenedor-general {
     display: grid;
     grid-template-columns: repeat(1, 1fr 2fr);
     gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background: linear-gradient(#212121, #212121) padding-box,
         linear-gradient(155deg, transparent 50%, #e81cff, #40c9ff) border-box;
     border: 0.1rem solid transparent;
@@ -45,15 +74,20 @@ h1 {
     max-width: 85%;
     /* Cambiado a 100% */
     margin: 0 auto;
+    margin-top: 1rem;
     /* Cambiado el margen */
 }
 
 .container-table {
     width: 95%;
     max-width: 50rem;
-    padding-left: 1rem;
-    color: #717171;
+    /* padding-left: 1rem; */
+    color: #8b8b8b;
     height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    font-size: 1.1rem;
 }
 
 table {
@@ -63,6 +97,7 @@ table {
     width: 100%;
     margin-right: 1rem;
     padding-inline: 1rem;
+    /* font-size: 2.1rem; */
 }
 
 /* Estilo para la tabla */
@@ -77,12 +112,15 @@ table td {
     padding: 0.4rem;
     margin-right: 0.1rem;
     text-align: left;
+    font-size: 1.1rem;
 }
 
 table th {
     padding: 0.8rem;
+    color: #a591f5;
+    text-align: left;
+    font-size: 1.15rem;
 }
-
 
 .button-container {
     display: flex;
@@ -108,12 +146,117 @@ table th {
     border-radius: 0.7rem;
 }
 
+.edit-container {
+    /* padding-top: 1.8rem; */
+    display: inline-block;
+    width: 80%;
+    max-width: 20rem;
+    margin: auto auto;
+}
+
+.edit-container #editForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.edit-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.edit-container .form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #717171;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.edit-container .form-group input {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+    max-width: 18rem;
+}
+
+.edit-container .form-group textarea {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    resize: none;
+    color: #fff;
+    height: auto;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.edit-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.edit-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.edit-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+
+/* #editForm .form-group input {
+    width: 100%;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+#editForm .form-group textarea {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    resize: none;
+    color: #fff;
+    height: auto;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+#editForm .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+} 
+
+#editForm .form-group {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}*/
+
+
 .form-container {
     padding-top: 1.8rem;
     display: inline-block;
     width: 80%;
     max-width: 20rem;
     padding-left: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 20rem;
+    padding: 0;
+    padding-top: 1.6rem;
 }
 
 .form-container #addForm {
@@ -130,7 +273,7 @@ table th {
 
 .form-container .form-group label {
     display: block;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
     color: #717171;
     font-weight: 600;
     font-size: 1rem;
@@ -138,7 +281,7 @@ table th {
 
 .form-container .form-group input {
     width: 100%;
-    padding: 1rem 1rem;
+    padding: .8rem .8rem;
     border-radius: 0.5rem;
     color: #fff;
     font-family: inherit;
@@ -148,7 +291,7 @@ table th {
 
 .form-container .form-group textarea {
     width: 100%;
-    padding: 1rem 1rem;
+    padding: .8rem .8rem;
     border-radius: 0.5rem;
     resize: none;
     color: #fff;
@@ -172,9 +315,12 @@ table th {
     border-color: #e81cff;
 }
 
+
 .form-container #guardar,
-#searchButton {
-    display: flex;
+#searchButton,
+#cancelarEdicion,
+#guardarEdicion {
+    /* display: flex; */
     align-items: flex-start;
     justify-content: center;
     align-self: flex-start;
@@ -198,21 +344,28 @@ table th {
 
 .form-container #guardar:hover,
 #searchButton:hover {
-    background: linear-gradient(145deg, transparent 10%, #e81cff47, #40c9ff3b) border-box;
-    border-color: #fff;
-    color: #d6d3d3;
-    border: 1px solid #d6d3d3;
+    background-color: #6e4cf5;
+    color: #f2f2f2;
+    border: 1px solid #f2f2f2;
 }
 
 #guardad {
     margin: 0;
 }
 
+#buscarProduct{
+    color: #a591f5;
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 0;
+}
 /* ------------------------------------------------- */
 .radio-button-container {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap:2rem;
+    padding-top: 1.2rem;
+    margin: 0 auto;
 }
 
 .radio-button {
@@ -267,11 +420,15 @@ table th {
 .delete:hover {
     background-color: rgb(132, 25, 25);
     color: #f2f2f2;
+    border: 1px solid #f2f2f2;
 }
 
-.edit:hover {
+.edit:hover,
+#cancelarEdicion:hover,
+#guardarEdicion:hover {
     background-color: #6e4cf5;
     color: #f2f2f2;
+    border: 1px solid #f2f2f2;
 }
 
 .totales {
@@ -285,6 +442,7 @@ table th {
     color: #a591f5;
     font-family: 'Yantramanav', sans-serif;
     font-size: 1.1rem;
+    text-align: left;
 }
 
 .totales div {
@@ -304,17 +462,20 @@ table th {
         background: linear-gradient(#212121, #212121) padding-box,
             linear-gradient(155deg, transparent 10%, #e81cff, #40c9ff) border-box;
         border: 0.1rem solid transparent;
-
+        text-align: center;
     }
 
     .container-table {
         max-width: 90%;
-        margin-left: 0;
+        display: inline-block;
+        text-align: center;
+        justify-content: center;
     }
 
     table {
         font-size: 0.8rem;
         padding-inline: 0.5rem;
+        margin: 0 auto;
     }
 
     .form-container {
